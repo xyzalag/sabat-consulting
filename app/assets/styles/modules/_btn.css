@@ -1,0 +1,48 @@
+.btn {
+  border: 4px solid $tertiary-color;
+  padding: 2rem;
+  margin: 2rem auto 1rem auto;
+  display: block;
+  position: relative;
+  z-index: 999;
+  background-color: $tertiary-color;
+
+  a {
+    text-decoration: none;
+    color: $primary-dark;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    transition: all .3s ease;
+    text-transform: uppercase;
+    background-color: transparent;
+    font-size: 1.6rem;
+
+    .btn__icon {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  &::after {
+    content:"";
+    width: 100%;
+    height: 0;
+    background-color: $tertiary-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -999;
+    transition: all .3s ease;
+  }
+
+  &:hover {
+    &::after {
+      height: 100%;
+    }
+
+    a {
+      color: white;
+    }
+  }
+}
+

@@ -1,0 +1,166 @@
+.homepage {
+
+	margin: 15rem auto;
+
+	&__about {
+		margin-bottom: 10rem;
+
+		@mixin atLarge {
+			max-width: 50%;
+		}
+
+		p {
+			font-weight: 300;
+			font-size: 1.6rem;
+
+			@mixin atMedium {
+				font-size: 2.2rem;
+			}
+
+			strong {
+				text-transform: uppercase;
+			}
+		}
+
+		h3 {
+			font-size: 2rem;
+			font-weight: 300;
+			color: $secondary-color;
+
+			@mixin atMedium {
+				font-size: 3.5rem;
+			}
+		}
+	}
+
+	&__container {
+		position: relative;
+
+		@mixin atMedium {
+			&::after {
+				position: absolute;
+				content: "";
+				width: 4px;
+				height: 100%;
+				background-color: $primary-color;
+				top: 0;
+				left: 50%;
+				z-index: -99;
+			}
+				&::before {
+				position: absolute;
+				content: "";
+				width: 100%;
+				height: 4px;
+				background-color: $primary-color;
+				top: 50%;
+				left: 0;
+				z-index: -99;
+			}
+		}
+	}
+
+	&__logo {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: #fff;
+		padding: 3rem;
+		border-radius: 50%;
+		display: none;
+
+		@mixin atMedium {
+			display: block;
+		}
+
+		img {
+			max-width: 100%;
+			height: 15rem;
+		}
+	}
+
+	&__column {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-transform: uppercase;
+		padding: 4rem 5rem;
+
+		&:first-of-type {
+
+			h3::after {
+				background-color: $secondary-color;
+			}
+
+			.btn {
+				border: 4px solid $secondary-color;
+
+				a::after {
+					background-color: $secondary-color;
+				}
+			}
+		}
+
+		&:last-of-type {
+			h3::after {
+				background-color: $tertiary-color;
+			}
+		}
+
+		&:first-of-type {
+			.btn::after {
+				background-color: $secondary-color;
+			}
+		}
+		
+		h3 {
+			font-size: 5rem;
+			font-weight: 300;
+			letter-spacing: 5px;
+			font-weight: 200;
+			position: relative;
+			display: block;
+			padding: 2rem;
+			border: 4px solid $primary-color;
+
+			&::after {
+				position: absolute;
+				bottom: -3.5rem;
+				left: 50%;
+				transform: translateX(-50%);
+				content: "";
+				width: 20rem;
+				height: 5px;
+			}
+		}
+
+		span {
+			font-size: 2.5rem;
+			font-weight: 300;
+			letter-spacing: 2px;
+			margin: 5rem auto;
+		}
+
+		img {
+			max-width: 100%;
+			height: 20rem;
+			border-radius: 2px;
+			-webkit-filter: grayscale(70%);
+  			filter: grayscale(70%);
+  			transition: .4s all ease;
+
+  			&:hover {
+  				transform: scale(1.1);
+  			}
+		}
+
+		.btn {
+			background-color: transparent;
+			padding: 2rem 4rem;
+		}
+	}
+
+}

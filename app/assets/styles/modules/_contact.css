@@ -1,0 +1,44 @@
+.contact {
+  &__container {
+    text-align: center;
+    margin-bottom: 15rem;
+
+    h4 {
+      font-size: 3rem;
+      font-weight: 300;
+      margin: 5rem auto;
+
+      @mixin atMedium {
+        font-size: 10rem;
+      }
+    }
+
+    img {
+      height: 15rem;
+      margin: 2rem auto;
+      display: block;
+    }
+
+    p {
+      font-size: 2.2rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin: 5rem auto;
+    }
+
+
+    a {
+      color: #fff;
+      background-color: $secondary-color;
+      padding: 2rem 4rem;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      font-weight: 300;
+
+      @mixin atMedium {
+        font-size: 4rem;
+      }
+    }
+  }
+}

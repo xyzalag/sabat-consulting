@@ -1,0 +1,39 @@
+html {
+  overflow-x: hidden;
+  font-size: 50%; 
+
+  @include atMedium {
+    font-size: 62.5%;
+  }
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  color: $primary-dark;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.shadow-black {
+	box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.shadow-white {
+	box-shadow: 1px 1px 30px -1px rgba(255, 255, 255, 0.49);
+}
+

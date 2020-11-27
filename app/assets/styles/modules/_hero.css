@@ -1,0 +1,87 @@
+.hero {
+	&__background {
+		width: 100vw;
+		height: 100vh;
+		position: relative;
+		background: #ffffff url("../../assets/images/hero.jpg") no-repeat top center;
+		background-size: cover;
+		background-attachment: fixed;
+		z-index: 99;
+
+		&::after {
+			content: "";
+			top: 0;
+			left: 0;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(#fff, .8);
+			z-index: -99;
+		}
+	}
+
+	&__container {
+		display: flex;
+		width: 100%;
+		height: 60%;
+		align-items: center;
+		justify-content: flex-end;
+		flex-direction: column;
+	}
+
+	&__logo {
+		height: 20rem;
+		max-width: 100%;
+
+		@mixin atMedium {
+			height: 30rem;
+		}
+
+		img {
+			height: 15rem;
+			max-width: 100%;
+
+			@mixin atMedium {
+				height: 25rem;
+			}
+		}
+	}
+
+	.btn {
+		margin-top: 100px;
+		
+		&::after {
+			display: none;
+		}
+
+		&::hover {
+			background-color: transparent;
+		}
+	}
+
+	&.subpage {
+		.hero__background {
+			height: 60vh;
+			border-bottom: 15px solid $tertiary-color;
+			background-attachment: scroll;
+			background-position: bottom center;
+		}
+
+		.hero__container {
+			height: 100%;
+			justify-content: center;
+		}
+
+		.hero__logo {
+			height: 15rem;
+
+			img {
+				height: 15rem;
+			}
+		}
+		.btn {
+			margin-top: -2.5rem;
+			padding: 2rem;
+		}
+	}
+}

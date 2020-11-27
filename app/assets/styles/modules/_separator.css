@@ -1,0 +1,7 @@
+.separator {
+	width: 100%;
+	position: relative;
+	height: 15px;
+	background-color: $primary-color;
+	margin: 5rem auto;
+}

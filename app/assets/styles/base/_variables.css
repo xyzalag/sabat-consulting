@@ -1,0 +1,22 @@
+$mainBlue: #20505C;
+
+$color-first: #ab8192;
+$color-first-dark: #996666;
+
+
+$color-second: #c0b283;
+
+
+/*COLORS*/
+/*blue*/
+$primary-color: #1D9BA8; 
+/*red*/
+$secondary-color: #FC8971;
+/*yellow*/
+$tertiary-color: #F6CD60;
+/*darks*/
+$primary-dark: #393939;
+
+
+/*FONTS*/
+$primary-font: 'Montserrat', sans-serif;
